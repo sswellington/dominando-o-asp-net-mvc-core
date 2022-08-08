@@ -11,6 +11,9 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 
+//INTRO: carregar os arquivos estaticos (css, js, etc)
+app.UseStaticFiles();
+
 //INTRO: definir a rota padrao
 app.MapControllerRoute(
     name: "default",

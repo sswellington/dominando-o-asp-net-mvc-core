@@ -1,0 +1,69 @@
+﻿<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br">
+	<head>
+	    <meta charset="utf-8" />
+	    <meta http-equiv="Cache-control" content="public">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="github.com/sswellington">
+		<meta name="robots" content="github.com/sswellington">
+		<meta name="keywords" content="github.com/sswellington">
+		<meta name="description" content="github.com/sswellington">
+
+		<title>@ViewData["Title"]</title>
+
+		<environment include="Development">
+			<link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css"/>
+			<link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css"/>
+		</environment>
+
+		<environment exclude="Development">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css"
+				asp-fallback-href="~/lib/bootstrap/css/bootstrap.css"
+				asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+				integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" 
+				crossorigin="anonymous" 
+				referrerpolicy="no-referrer" 
+			/>
+		</environment>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm bg-light border-bottom mb-3">
+				<div class="container">
+					<a class ="navbar-brand" asp-action="Index" asp-controller="Home" asp-area=""> Home </a>
+				</div>
+			</nav>
+		</header>
+		
+		<div class="container">
+			<main role="main" class="pb-3">
+				@RenderBody()
+			</main>
+		</div>
+		
+		<footer class="border-top modal-footer text-muted">
+			<div class="container"> sswellington  </div>
+		</footer>
+	</body>
+		<environment include="Development">
+			<script src="~/lib/jquery/jquery.js"></script>
+			<script src="~/lib/bootstrap/js/bootstrap.js"></script>
+		</environment>
+
+		<environment exclude="Development">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			asp-fallback-src="~/lib/jquery/jquery.js"
+			asp-fallback-test="window.jQuery"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+			crossorigin="anonymous" 
+			referrerpolicy="no-referrer">
+		</script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js" 
+				asp-fallback-src="~/lib/bootstrap/js/bootstrap.js"
+				asp-fallback-test="window.jQuery && window.jQuery.fn && windows.jQuery.fn.modal"
+				integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg=="							crossorigin="anonymous" 
+				referrerpolicy="no-referrer">
+			</script>
+		</environment>
+</html>
