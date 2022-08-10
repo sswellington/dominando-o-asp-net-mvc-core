@@ -167,8 +167,6 @@ abbr[title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
 }
 
 address {
@@ -317,7 +315,6 @@ caption {
 
 th {
   text-align: inherit;
-  text-align: -webkit-match-parent;
 }
 
 thead,
@@ -418,16 +415,6 @@ legend {
 }
 legend + * {
   clear: left;
-}
-
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-minute,
-::-webkit-datetime-edit-hour-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-year-field {
-  padding: 0;
 }
 
 ::-webkit-inner-spin-button {
@@ -2115,13 +2102,11 @@ progress {
 .form-control-sm::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 .form-control-sm::file-selector-button {
   padding: 0.25rem 0.5rem;
   margin: -0.25rem -0.5rem;
-  -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
 
@@ -2134,13 +2119,11 @@ progress {
 .form-control-lg::-webkit-file-upload-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
 }
 .form-control-lg::file-selector-button {
   padding: 0.5rem 1rem;
   margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
 }
 
@@ -2162,7 +2145,7 @@ textarea.form-control-lg {
 .form-control-color:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
-.form-control-color::-moz-color-swatch {
+.form-control-color {
   border: 0 !important;
   border-radius: 0.375rem;
 }
@@ -2180,7 +2163,6 @@ textarea.form-control-lg {
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
-  -moz-padding-start: calc(0.75rem - 3px);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2271,7 +2253,6 @@ textarea.form-control-lg {
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
-  color-adjust: exact;
   print-color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
@@ -2376,7 +2357,7 @@ textarea.form-control-lg {
 .form-range:focus::-webkit-slider-thumb {
   box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.form-range:focus::-moz-range-thumb {
+.form-range:focus {
   box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-range::-moz-focus-outer {
@@ -2412,7 +2393,7 @@ textarea.form-control-lg {
   border-color: transparent;
   border-radius: 1rem;
 }
-.form-range::-moz-range-thumb {
+.form-range {
   width: 1rem;
   height: 1rem;
   background-color: #0d6efd;
@@ -2424,15 +2405,15 @@ textarea.form-control-lg {
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-range::-moz-range-thumb {
+  .form-range {
     -moz-transition: none;
     transition: none;
   }
 }
-.form-range::-moz-range-thumb:active {
+.form-range:active {
   background-color: #b6d4fe;
 }
-.form-range::-moz-range-track {
+.form-range {
   width: 100%;
   height: 0.5rem;
   color: transparent;
@@ -2447,7 +2428,7 @@ textarea.form-control-lg {
 .form-range:disabled::-webkit-slider-thumb {
   background-color: #adb5bd;
 }
-.form-range:disabled::-moz-range-thumb {
+.form-range:disabled {
   background-color: #adb5bd;
 }
 
@@ -2491,7 +2472,7 @@ textarea.form-control-lg {
 .form-floating > .form-control-plaintext::placeholder {
   color: transparent;
 }
-.form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+.form-floating > .form-control:not(), .form-floating > .form-control-plaintext:not() {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
@@ -2510,7 +2491,7 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+.form-floating > .form-control:not() ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
