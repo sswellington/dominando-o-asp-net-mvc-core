@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc.Razor;
+
 //INTRO: meio de acesso de todos os recursos
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +17,10 @@ if (app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 //INTRO: definir a rota padrao
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}"
-);
+app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+
+//INTRO: Rota de área genérica (não necessário no caso da demo)
+app.MapControllerRoute("areas", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 //INTRO: rodar a aplicacao
 app.Run();
